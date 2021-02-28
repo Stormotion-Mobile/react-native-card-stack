@@ -57,8 +57,10 @@ export default function App() {
         return;
       }
 
-      translateX.value = withSpring(hiddenTranslateX, {}, () =>
-        runOnJS(setCurrentIndex)(currentIndex + 1)
+      translateX.value = withSpring(
+        Math.sign(event.velocityX) * hiddenTranslateX,
+        {},
+        () => runOnJS(setCurrentIndex)(currentIndex + 1)
       );
     },
   });
