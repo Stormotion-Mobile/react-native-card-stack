@@ -21,8 +21,7 @@ const SWIPE_VELOCITY = 800;
 
 const App: FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextIndex = currentIndex + 1;
+  const [nextIndex, setNextIndex] = useState(currentIndex + 1);
 
   const currentItem = cards[currentIndex];
   const nextItem = cards[nextIndex];
@@ -95,7 +94,9 @@ const App: FC = () => {
 
   useEffect(() => {
     translateX.value = 0;
-  }, [currentIndex]);
+
+    setTimeout(() => setNextIndex(currentIndex + 1));
+  }, [currentIndex, translateX]);
 
   return (
     <View style={styles.container}>
