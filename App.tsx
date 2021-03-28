@@ -19,11 +19,14 @@ const ROTATION_ANGLE = 20;
 const SWIPE_VELOCITY = 800;
 
 const items: ItemType[] = [
-  { title: "Doggo 1", photo: "https://picsum.photos/id/237/500/500" },
-  { title: "Doggo 2", photo: "https://picsum.photos/id/237/500/500" },
-  { title: "Doggo 3", photo: "https://picsum.photos/id/237/500/500" },
-  { title: "Doggo 4", photo: "https://picsum.photos/id/237/500/500" },
-  { title: "Doggo 5", photo: "https://picsum.photos/id/237/500/500" },
+  { title: "Lorem ipsum", photo: "https://picsum.photos/id/1/500" },
+  { title: "Dolor sit amet", photo: "https://picsum.photos/id/2/500" },
+  {
+    title: "Consectetur adipiscing elit",
+    photo: "https://picsum.photos/id/3/500",
+  },
+  { title: "Phasellus ultricies", photo: "https://picsum.photos/id/4/500" },
+  { title: "Sed sit amet", photo: "https://picsum.photos/id/5/500" },
 ];
 
 export default function App() {
