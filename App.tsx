@@ -16,7 +16,7 @@ import Animated, {
 import Item from "./src/components/Item";
 import { items } from "./src/mocks/items";
 
-const ROTATION_ANGLE = 20;
+const ROTATION_ANGLE = 60;
 const SWIPE_VELOCITY = 800;
 
 export default function App() {
