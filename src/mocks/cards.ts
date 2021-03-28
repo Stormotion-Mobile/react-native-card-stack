@@ -1,6 +1,6 @@
-import { ItemType } from "../types/Item";
+import { Card } from "../types/Card";
 
-export const items: ItemType[] = [
+export const cards: Card[] = [
   { title: "Lorem ipsum", photo: "https://picsum.photos/id/1/500" },
   { title: "Dolor sit amet", photo: "https://picsum.photos/id/2/500" },
   {

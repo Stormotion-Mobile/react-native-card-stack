@@ -13,8 +13,8 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import Item from "./src/components/Item";
-import { items } from "./src/mocks/items";
+import CardItem from "./src/components/CardItem";
+import { cards } from "./src/mocks/cards";
 
 const ROTATION_ANGLE = 60;
 const SWIPE_VELOCITY = 800;
@@ -24,8 +24,8 @@ const App: FC = () => {
 
   const nextIndex = currentIndex + 1;
 
-  const currentItem = items[currentIndex];
-  const nextItem = items[nextIndex];
+  const currentItem = cards[currentIndex];
+  const nextItem = cards[nextIndex];
 
   const translateX = useSharedValue(0);
 
@@ -102,14 +102,14 @@ const App: FC = () => {
       <View style={styles.nextItemContainer}>
         {nextItem && (
           <Animated.View style={nextItemAnimatedStyle}>
-            <Item item={nextItem} />
+            <CardItem card={nextItem} />
           </Animated.View>
         )}
       </View>
       {currentItem && (
         <PanGestureHandler onGestureEvent={gestureHandler}>
           <Animated.View style={currentItemAnimatedStyle}>
-            <Item item={currentItem} />
+            <CardItem card={currentItem} />
           </Animated.View>
         </PanGestureHandler>
       )}

@@ -9,13 +9,13 @@ import {
   ViewProps,
   ViewStyle,
 } from "react-native";
-import { ItemType } from "../types/Item";
+import { Card } from "../types/Card";
 
 type ItemProps = Pick<ViewProps, "style"> & {
-  item: ItemType;
+  card: Card;
 };
 
-const Item: FC<ItemProps> = ({ item: { title, photo }, style }) => {
+const CardItem: FC<ItemProps> = ({ card: { title, photo }, style }) => {
   const { width: screenWidth } = useWindowDimensions();
 
   const containerStyle = useMemo<StyleProp<ViewStyle>>(
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(Item);
+export default memo(CardItem);
