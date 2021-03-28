@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { StyleSheet, useWindowDimensions, View } from "react-native";
 import {
   PanGestureHandler,
@@ -19,7 +19,7 @@ import { items } from "./src/mocks/items";
 const ROTATION_ANGLE = 60;
 const SWIPE_VELOCITY = 800;
 
-export default function App() {
+const App: FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextIndex = currentIndex + 1;
@@ -115,7 +115,7 @@ export default function App() {
       )}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -130,3 +130,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+export default App;
