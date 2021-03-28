@@ -106,12 +106,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View
-        style={[
-          StyleSheet.absoluteFill,
-          { alignItems: "center", justifyContent: "center" },
-        ]}
-      >
+      <View style={styles.nextItemContainer}>
         {nextItem && (
           <Animated.View style={nextItemAnimatedStyle}>
             <Item item={nextItem} />
@@ -132,7 +127,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  nextItemContainer: {
+    ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
   },
