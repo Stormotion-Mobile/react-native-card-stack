@@ -29,9 +29,9 @@ const App: FC = () => {
 
   const translateX = useSharedValue(0);
 
-  const window = useWindowDimensions();
+  const { width: screenWidth } = useWindowDimensions();
 
-  const hiddenTranslateX = 2 * window.width;
+  const hiddenTranslateX = 2 * screenWidth;
 
   const gestureHandler = useAnimatedGestureHandler<
     PanGestureHandlerGestureEvent,
