@@ -26,7 +26,7 @@ const CardItem: FC<ItemProps> = ({ card: { title, photo }, style }) => {
   const source = useMemo<ImageProps["source"]>(() => ({ uri: photo }), [photo]);
 
   return (
-    <ImageBackground style={containerStyle} source={source}>
+    <ImageBackground key={title} style={containerStyle} source={source}>
       <Text style={styles.title}>{title}</Text>
     </ImageBackground>
   );
