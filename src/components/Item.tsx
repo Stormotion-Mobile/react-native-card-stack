@@ -1,20 +1,15 @@
 import React, { FC, memo, useMemo } from "react";
 import {
   ImageBackground,
-  ViewProps,
+  ImageProps,
+  StyleProp,
+  StyleSheet,
   Text,
   useWindowDimensions,
-  StyleSheet,
-  View,
-  StyleProp,
+  ViewProps,
   ViewStyle,
-  ImageProps,
 } from "react-native";
-
-export type ItemType = {
-  photo: string;
-  title: string;
-};
+import { ItemType } from "../types/Item";
 
 type ItemProps = Pick<ViewProps, "style"> & {
   item: ItemType;

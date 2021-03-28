@@ -13,21 +13,11 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import Item, { ItemType } from "./src/components/Item";
+import Item from "./src/components/Item";
+import { items } from "./src/mocks/items";
 
 const ROTATION_ANGLE = 20;
 const SWIPE_VELOCITY = 800;
-
-const items: ItemType[] = [
-  { title: "Lorem ipsum", photo: "https://picsum.photos/id/1/500" },
-  { title: "Dolor sit amet", photo: "https://picsum.photos/id/2/500" },
-  {
-    title: "Consectetur adipiscing elit",
-    photo: "https://picsum.photos/id/3/500",
-  },
-  { title: "Phasellus ultricies", photo: "https://picsum.photos/id/4/500" },
-  { title: "Sed sit amet", photo: "https://picsum.photos/id/5/500" },
-];
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
