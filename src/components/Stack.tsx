@@ -12,6 +12,7 @@ import Animated, {
   useDerivedValue,
   useSharedValue,
   withSpring,
+  withTiming,
 } from "react-native-reanimated";
 
 const ROTATION_ANGLE = 60;
@@ -107,9 +108,9 @@ function Stack<T>({
   }));
 
   useEffect(() => {
-    translateX.value = 0;
-
-    setTimeout(() => setNextIndex(currentIndex + 1));
+    translateX.value = withTiming(0, { duration: 0 }, () =>
+      runOnJS(setNextIndex)(currentIndex + 1)
+    );
   }, [currentIndex, translateX]);
 
   return (
