@@ -2,7 +2,7 @@
 
 Implementation of a Tinder-like swipable card stack.
 
-Created using:
+### Created using:
 
 - React Native
 - React Native Reanimated
